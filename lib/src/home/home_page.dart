@@ -1,3 +1,4 @@
+import 'package:calculator/src/home/components/keypad_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -10,11 +11,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [],
-      ),
+    return const Scaffold(
+      backgroundColor: Color(0xFF292929),
+      body: Keypad(),
     );
   }
 }
