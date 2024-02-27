@@ -22,16 +22,14 @@ class Buttons extends StatelessWidget {
 
     return SizedBox(
       height: 60,
-      width: normalSize 
-        ? smallButtonSize 
-        : bigButtonSize,
+      width: normalSize ? smallButtonSize : bigButtonSize,
       child: ElevatedButton(
         onPressed: () {},
-        style: const ButtonStyle(),
+        style: ElevatedButton.styleFrom(backgroundColor: const Color.fromARGB(255, 147, 7, 172)),
         child: Text(
           btnContent,
           style: const TextStyle(
-            color: Color(0xFF292929),
+            color: Colors.white,
             fontSize: 18,
             fontWeight: FontWeight.w600,
           ),
