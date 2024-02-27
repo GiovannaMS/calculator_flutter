@@ -40,20 +40,29 @@ class Keypad extends StatelessWidget {
       const Buttons.small(content: '.'),
       const Buttons.small(content: '='),
     ];
-    
-    return SizedBox(
-        height: MediaQuery.sizeOf(context).width * 0.7,
-        width: MediaQuery.sizeOf(context).width * 0.63,
+
+    return Padding(
+      padding: EdgeInsets.symmetric(
+        vertical: 10,
+        horizontal: MediaQuery.sizeOf(context).width * 0.03,
+      ),
+      child: SizedBox(
+        height: MediaQuery.sizeOf(context).height * 0.58,
+        width: MediaQuery.sizeOf(context).width,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             ButtonsRow(buttonsList: buttonsFirstRow),
+            const SizedBox(height: 10),
             ButtonsRow(buttonsList: buttonsSecondRow),
+            const SizedBox(height: 10),
             ButtonsRow(buttonsList: buttonsThirdRow),
+            const SizedBox(height: 10),
             ButtonsRow(buttonsList: buttonsFourthRow),
+            const SizedBox(height: 10),
             ButtonsRow(buttonsList: buttonsLastList),
           ],
         ),
-      );
+      ),
+    );
   }
 }
